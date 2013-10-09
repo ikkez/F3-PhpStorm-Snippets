@@ -7,9 +7,9 @@
 
 to install, copy the `F3.xml` file to:
 
-Windows: `<your home directory>\.WebIde<version>\templates`
-Linux: `~\.WebIde<version>\templates`
-MacOS: `~/Library/Preferences/WebIde<version>\templates`
++ Windows: `<your home directory>\.WebIde<version>\templates`
++ Linux: `~\.WebIde<version>\templates`
++ MacOS: `~/Library/Preferences/WebIde<version>\templates`
 
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
@@ -19,6 +19,9 @@ Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings
 
 Now you can write the following keywords, hit your `TAB` key and let the magic begin. Some snippets have multiple variables to be filled. Hit your `ENTER` key to proceed to the next input section.
 
+Check out this little demo:
+
+![Demo](https://dl.dropboxusercontent.com/u/3077539/_linked/F3-Snippets-Demo.gif)
 
 ### PHP Snippets
 
