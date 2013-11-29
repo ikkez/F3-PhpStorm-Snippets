@@ -92,7 +92,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="{{" value="{{ @$var$ }}$end$" description="{{@var}}" toReformat="false" toShortenFQNames="true">
+  <template name="{{" value="{{ $var$ }}$end$" description="{{@var}}" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
     <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -671,7 +671,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="base" value="/** @var Base $ivar$ */&#10;$var$ = \Base::instance();&#10;$end$" description="get base instance" toReformat="false" toShortenFQNames="true">
+  <template name="base" value="/** @var \Base $ivar$ */&#10;$var$ = \Base::instance();&#10;$end$" description="get base instance" toReformat="false" toShortenFQNames="true">
     <variable name="var" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
     <variable name="ivar" expression="var" defaultValue="" alwaysStopAt="false" />
     <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
