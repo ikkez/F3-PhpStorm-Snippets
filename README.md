@@ -30,7 +30,7 @@ Check out this little demo:
 expands to:
 
 ``` php
-/** @var Base $f3 */
+/** @var \Base $f3 */
 $f3 = \Base::instance();
 ```
 
@@ -49,9 +49,45 @@ $f3->route('GET /',function( Base $f3, $params) {
 });
 ```
 
+#### db_jig
+
+``` php
+$f3->set('DB', new \DB\Jig('data/'));
+```
+
+#### db_mongo
+
+``` php
+$f3->set('DB', new \DB\Mongo('mongodb://localhost:27017', 'testdb'));
+```
+
+#### db_mysql
+
+``` php
+$f3->set('DB', new \DB\SQL('mysql:host=localhost;port=3306;dbname=fatfree', 'fatfree', 'fatfree'));
+```
+
+#### db_pgsql
+
+``` php
+$f3->set('DB', new \DB\SQL('pgsql:host=localhost;dbname=fatfree', 'fatfree', 'fatfree'));
+```
+
+#### db_sqlite
+
+``` php
+$f3->set('DB', new \DB\SQL('sqlite:data/sqlite.db'));
+```
+
 
 ### Template Snippets
 
+
+#### {{
+
+``` html
+{{  }}
+```
 
 #### @
 
