@@ -7,9 +7,9 @@
 
 to install, copy the `F3.xml` file to:
 
-+ Windows: `<your home directory>\.WebIde<version>\templates`
-+ Linux: `~\.WebIde<version>\templates`
-+ MacOS: `~/Library/Preferences/WebIde<version>\templates`
++ Windows: `<your home directory>\.WebIde<version>\config\templates`
++ Linux: `~\.WebIde<version>\config\templates`
++ MacOS: `~/Library/Preferences/WebIde<version>/config/templates`
 
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
