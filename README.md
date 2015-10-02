@@ -9,7 +9,7 @@ to install, copy the `F3.xml` file to:
 
 + Windows: `<your home directory>\.WebIde<version>\config\templates`
 + Linux: `~\.WebIde<version>\config\templates`
-+ MacOS: `~/Library/Preferences/WebIde<version>/config/templates`
++ MacOS: `~/Library/Preferences/WebIde<version>/templates` (for 9.x versions)
 
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
@@ -71,6 +71,12 @@ $f3->set('DB', new \DB\SQL('mysql:host=localhost;port=3306;dbname=fatfree', 'fat
 
 ``` php
 $f3->set('DB', new \DB\SQL('pgsql:host=localhost;dbname=fatfree', 'fatfree', 'fatfree'));
+```
+
+#### db_sqlsrv
+
+``` php
+$f3->set('DB', new \DB\SQL('sqlsrv:Server=localhost,1433;Database=fatfree', 'fatfree', ''));
 ```
 
 #### db_sqlite
