@@ -73,6 +73,12 @@ $f3->set('DB', new \DB\SQL('mysql:host=localhost;port=3306;dbname=fatfree', 'fat
 $f3->set('DB', new \DB\SQL('pgsql:host=localhost;dbname=fatfree', 'fatfree', 'fatfree'));
 ```
 
+#### db_sqlsrv
+
+``` php
+$f3->set('DB', new \DB\SQL('sqlsrv:Server=localhost,1433;Database=fatfree', 'fatfree', ''));
+```
+
 #### db_sqlite
 
 ``` php

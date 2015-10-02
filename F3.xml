@@ -720,6 +720,32 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="db_sqlsrv" value="$f3$-&gt;set('DB', new \DB\SQL('sqlsrv:Server=$host$,$port$;Database=$db$', '$user$', '$pw$'));" description="new MS SQL Server and SQL Azure DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="host" expression="" defaultValue="&quot;localhost&quot;" alwaysStopAt="true" />
+    <variable name="port" expression="" defaultValue="&quot;1433&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="pw" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
   <template name="db_jig" value="$f3$-&gt;set('DB', new \DB\Jig('$path$'));" description="new JIG DB instance" toReformat="false" toShortenFQNames="true">
     <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
     <variable name="path" expression="" defaultValue="&quot;data/&quot;" alwaysStopAt="true" />
