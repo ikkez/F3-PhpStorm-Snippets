@@ -27,7 +27,7 @@ To install, copy `codestyles/F3_Codestyle.xml` to your config folder. Restart Ph
 * select F3 Scheme
 * apply
 	
-when you now user your Menu > Code > Reformat Code, it should be all formatted in decent F3 style, oh yeah ;)
+when you now use your Menu > Code > Reformat Code, it should be all formatted in decent F3 style, oh yeah ;)
 
 
 ## Live-Template
