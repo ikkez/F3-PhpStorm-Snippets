@@ -4,24 +4,48 @@
 [Fat-Free Framework](https://github.com/bcosca/fatfree) snippets for [PhpStorm](http://www.jetbrains.com/phpstorm/).
 
 ## How-To install
+to install PhpStorm schemes, settings and templates, you need to find its user config folder first. This should be present at:
 
-to install, copy the `F3.xml` file to:
+(for 9.x versions)
++ Windows: `<your home directory>\.WebIde<version>\config\`
++ Linux: `~\.WebIde<version>\config\`
++ MacOS: `~/Library/Preferences/WebIde<version>/`
 
-+ Windows: `<your home directory>\.WebIde<version>\config\templates`
-+ Linux: `~\.WebIde<version>\config\templates`
-+ MacOS: `~/Library/Preferences/WebIde<version>/templates` (for 9.x versions)
+(for versions 2016+)
++ Windows: `<your home directory>\.PhpStorm<version>\config\`
++ Linux: `~\.PhpStorm<version>\config\`
++ MacOS: `~/Library/Preferences/PhpStorm<version>/`
 
+
+## Code Style
+
+The F3 code style uses a very compact alignment. 
+
+To install, copy `codestyles/F3_Codestyle.xml` to your config folder. Restart PhpStorm and continue at Preferences > Editor > Code Style 
+
+* set default right margins (columns) to 90 (no exceptions)
+* select F3 Scheme
+* apply
+	
+when you now user your Menu > Code > Reformat Code, it should be all formatted in decent F3 style, oh yeah ;)
+
+
+## Live-Template
+
+To install, copy the `templates/F3.xml` file to your user config folder.
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
 ![Settings](https://dl.dropboxusercontent.com/u/3077539/_linked/F3-Snippets-Settings.jpg)
 
-## Usage
+
+### Usage
 
 Now you can write the following keywords, hit your `TAB` key and let the magic begin. Some snippets have multiple variables to be filled. Hit your `ENTER` key to proceed to the next input section.
 
 Check out this little demo:
 
 ![Demo](https://dl.dropboxusercontent.com/u/3077539/_linked/F3-Snippets-Demo.gif)
+
 
 ### PHP Snippets
 
@@ -88,6 +112,9 @@ $f3->set('DB', new \DB\SQL('sqlite:data/sqlite.db'));
 
 ### Template Snippets
 
+All template snippets can also be accessed with the `f3` prefix, i.e. like `f3repeat`, which will create the tag `<F3:repeat ... >`. This is helpful, since PhpStorm will colorize this in your html markup, so you'll find it easier to spot the F3 parts in your templates.
+
+---
 
 #### {{
 
@@ -225,6 +252,4 @@ expands to: repeat with key, value and counter
 {{@key}}
 ```
 
----
 
-Template snippets can also be accessed with the `f3` prefix, i.e. like `f3repeat`, which will create the tag `<F3:repeat ... >`. 

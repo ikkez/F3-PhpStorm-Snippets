@@ -1,0 +1,346 @@
+<templateSet group="F3">
+  <template name="repeat" value="&lt;repeat group=&quot;{{ @$group$ }}&quot; value=&quot;{{ @$value$ }}&quot;&gt;&#10;$end${{ @$ival$ }}&#10;&lt;/repeat&gt;" description="&lt;repeat&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="check" value="&lt;check if=&quot;{{ @$cond$ }}&quot;&gt;&#10;$end$&#10;&lt;/check&gt;" description="&lt;check&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="include" value="&lt;include if=&quot;{{ @$cond$ }}&quot; href=&quot;$href$&quot; /&gt;" description="&lt;include&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="href" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="loop" value="&lt;loop from=&quot;{{ $from$ }}&quot; to=&quot;{{ $to$ }}&quot; step=&quot;{{ $step$ }}&quot;&gt;&#10;&#9;$end$&#10;&lt;/loop&gt;" description="&lt;loop&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="from" expression="" defaultValue="&quot;@i=0&quot;" alwaysStopAt="true" />
+    <variable name="to" expression="" defaultValue="&quot;@i &lt; count(@bar)&quot;" alwaysStopAt="true" />
+    <variable name="step" expression="" defaultValue="&quot;@i++&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="{{" value="{{ $var$ }}$end$" description="{{@var}}" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="@" value="{{ @$var$ }}$end$" description="{{@var}}" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="@raw" value="{{ @$var$ | raw }}$end$" description="{{@var | raw}}" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="@format" value="{{ @$var$,123.45 | format }}$end$" description="{{@var | format}}" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="@esc" value="{{ @$var$ | esc }}$end$" description="{{@var | esc}}" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="repeat kv" value="&lt;repeat group=&quot;{{ @$group$ }}&quot; key=&quot;{{ @$key$ }}&quot; value=&quot;{{ @$value$ }}&quot;&gt;&#10;$end${{@$ikey$}} {{@$ival$}}&#10;&lt;/repeat&gt;" description="&lt;repeat key value&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="set" value="&lt;set $key$=&quot;$val$&quot; /&gt;&#10;$end${{@$ikey$}}" description="&lt;set key=&quot;val&quot;&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="val" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="repeat kvc" value="&lt;repeat group=&quot;{{ @$group$ }}&quot; key=&quot;{{ @$key$ }}&quot; value=&quot;{{ @$value$ }}&quot; counter=&quot;{{ @$i$ }}&quot;&gt;&#10;$end${{@$step$}}: {{@$ikey$}} {{@$ival$}}&#10;&lt;/repeat&gt;" description="&lt;repeat key value counter&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="step" expression="i" defaultValue="" alwaysStopAt="false" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="repeat vc" value="&lt;repeat group=&quot;{{ @$group$ }}&quot; value=&quot;{{ @$value$ }}&quot; counter=&quot;{{ @$i$ }}&quot;&gt;&#10;$end${{@$step$}}: {{@$ival$}}&#10;&lt;/repeat&gt;" description="&lt;repeat value counter&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="step" expression="i" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="switch" value="&lt;switch expr=&quot;{{@$expr$}}&quot;&gt;&#10;    &lt;default&gt;$default$&lt;/default&gt;&#10;    &lt;case value=&quot;$case1$&quot;&gt;$c1$&lt;/case&gt;&#10;    &lt;case value=&quot;$case2$&quot;&gt;$c2$&lt;/case&gt;&#10;    $end$&#10;&lt;/switch&gt;" description="&lt;switch&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="default" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="case1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="c1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="case2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="c2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="case" value="&lt;case value=&quot;$val$&quot; break=&quot;$break$&quot;&gt;$v$&lt;/case&gt;&#10;$end$" description="&lt;case&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="val" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="break" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <variable name="v" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3switch" value="&lt;F3:switch expr=&quot;{{@$expr$}}&quot;&gt;&#10;    &lt;default&gt;$default$&lt;/default&gt;&#10;    &lt;case value=&quot;$case1$&quot;&gt;$c1$&lt;/case&gt;&#10;    &lt;case value=&quot;$case2$&quot;&gt;$c2$&lt;/case&gt;&#10;    $end$&#10;&lt;/F3:switch&gt;" description="&lt;F3:switch&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="default" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="case1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="c1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="case2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="c2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3repeat kvc" value="&lt;F3:repeat group=&quot;{{ @$group$ }}&quot; key=&quot;{{ @$key$ }}&quot; value=&quot;{{ @$value$ }}&quot; counter=&quot;{{ @$i$ }}&quot;&gt;&#10;$end${{@$step$}}: {{@$ikey$}} {{@$ival$}}&#10;&lt;/F3:repeat&gt;" description="&lt;F3:repeat key value counter&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="step" expression="i" defaultValue="" alwaysStopAt="false" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="true" value="&lt;true&gt;&#10;$true$&#10;&lt;/true&gt;&#10;&lt;false&gt;&#10;$false$&#10;&lt;/false&gt;" description="&lt;true&gt; &lt;false&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="true" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="false" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3check" value="&lt;F3:check if=&quot;{{ @$cond$ }}&quot;&gt;&#10;$end$&#10;&lt;/F3:check&gt;" description="&lt;F3:check&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3include" value="&lt;F3:include if=&quot;{{ @$cond$ }}&quot; href=&quot;$href$&quot; /&gt;" description="&lt;F3:include&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="href" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3loop" value="&lt;F3:loop from=&quot;{{ $from$ }}&quot; to=&quot;{{ $to$ }}&quot; step=&quot;{{ $step$ }}&quot;&gt;&#10;&#9;$end$&#10;&lt;/F3:loop&gt;" description="&lt;F3:loop&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="from" expression="" defaultValue="&quot;@i=0&quot;" alwaysStopAt="true" />
+    <variable name="to" expression="" defaultValue="&quot;@i &lt; count(@bar)&quot;" alwaysStopAt="true" />
+    <variable name="step" expression="" defaultValue="&quot;@i++&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3repeat" value="&lt;F3:repeat group=&quot;{{ @$group$ }}&quot; value=&quot;{{ @$value$ }}&quot;&gt;&#10;$end${{ @$ival$ }}&#10;&lt;/F3:repeat&gt;" description="&lt;F3:repeat&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3repeat kv" value="&lt;F3:repeat group=&quot;{{ @$group$ }}&quot; key=&quot;{{ @$key$ }}&quot; value=&quot;{{ @$value$ }}&quot;&gt;&#10;$end${{@$ikey$}} {{@$ival$}}&#10;&lt;/F3:repeat&gt;" description="&lt;F3:repeat key value&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3repeat vc" value="&lt;F3:repeat group=&quot;{{ @$group$ }}&quot; value=&quot;{{ @$value$ }}&quot; counter=&quot;{{ @$i$ }}&quot;&gt;&#10;$end${{@$step$}}: {{@$ival$}}&#10;&lt;/F3:repeat&gt;" description="&lt;F3:repeat value counter&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="step" expression="i" defaultValue="" alwaysStopAt="false" />
+    <variable name="ival" expression="value" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3set" value="&lt;F3:set $key$=&quot;$val$&quot; /&gt;&#10;$end${{@$ikey$}}" description="&lt;F3:set key=&quot;val&quot;&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="val" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ikey" expression="key" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="@?" value="{{isset(@$var$)?@$var$:$else$}}$end$" description="isset ternary" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;var&quot;" alwaysStopAt="true" />
+    <variable name="else" expression="" defaultValue="&quot;''&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="route" value="$f3-&gt;route('GET /$path$','$dest$');&#10;$end$" description="$f3-&gt;route" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dest" expression="" defaultValue="&quot;Class-&gt;method&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="map" value="$f3-&gt;map('/$path$','$dest$');&#10;$end$" description="$f3-&gt;map" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dest" expression="" defaultValue="&quot;Class-&gt;method&quot;" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="base" value="/** @var \Base $ivar$ */&#10;$var$ = \Base::instance();&#10;$end$" description="get base instance" toReformat="false" toShortenFQNames="true">
+    <variable name="var" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="ivar" expression="var" defaultValue="" alwaysStopAt="false" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_mysql" value="$f3$-&gt;set('DB', new \DB\SQL('mysql:host=$host$;port=$port$;dbname=$db$', '$user$', '$pw$'));" description="new SQL DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="host" expression="" defaultValue="&quot;localhost&quot;" alwaysStopAt="true" />
+    <variable name="port" expression="" defaultValue="&quot;3306&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="pw" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_sqlsrv" value="$f3$-&gt;set('DB', new \DB\SQL('sqlsrv:Server=$host$,$port$;Database=$db$', '$user$', '$pw$'));" description="new MS SQL Server and SQL Azure DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="host" expression="" defaultValue="&quot;localhost&quot;" alwaysStopAt="true" />
+    <variable name="port" expression="" defaultValue="&quot;1433&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="pw" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_jig" value="$f3$-&gt;set('DB', new \DB\Jig('$path$'));" description="new JIG DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="path" expression="" defaultValue="&quot;data/&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_sqlite" value="$f3$-&gt;set('DB', new \DB\SQL('sqlite:$path$'));" description="new SQlite DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="path" expression="" defaultValue="&quot;data/sqlite.db&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_pgsql" value="$f3$-&gt;set('DB', new \DB\SQL('pgsql:host=$host$;dbname=$db$', '$user$', '$pw$'));" description="new PostgreSQL DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="host" expression="" defaultValue="&quot;localhost&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="user" expression="" defaultValue="&quot;fatfree&quot;" alwaysStopAt="true" />
+    <variable name="pw" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="db_mongo" value="$f3$-&gt;set('DB', new \DB\Mongo('mongodb://$host$:$port$', '$db$'));" description="new Mongo DB instance" toReformat="false" toShortenFQNames="true">
+    <variable name="f3" expression="" defaultValue="&quot;$f3&quot;" alwaysStopAt="true" />
+    <variable name="host" expression="" defaultValue="&quot;localhost&quot;" alwaysStopAt="true" />
+    <variable name="port" expression="" defaultValue="&quot;27017&quot;" alwaysStopAt="true" />
+    <variable name="db" expression="" defaultValue="&quot;testdb&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="route function" value="$f3-&gt;route('GET /$path$',function( Base $f3, $params) {&#10;    $end$&#10;});&#10;" description="$f3-&gt;route" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="f3case" value="&lt;F3:case value=&quot;$val$&quot; break=&quot;$break$&quot;&gt;$v$&lt;/F3:case&gt;&#10;$end$" description="&lt;F3:case&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="val" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="break" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
+    <variable name="v" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="f3true" value="&lt;F3:true&gt;&#10;$true$&#10;&lt;/F3:true&gt;&#10;&lt;F3:false&gt;&#10;$false$&#10;&lt;/F3:false&gt;" description="&lt;F3:true&gt; &lt;F3:false&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="true" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="false" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="routefunc" value="$f3-&gt;route('GET /$path$',function( Base $f3, $params) {&#10;    $end$&#10;});&#10;" description="$f3-&gt;route" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
