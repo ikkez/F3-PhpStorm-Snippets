@@ -35,7 +35,7 @@ when you now use your Menu > Code > Reformat Code, it should be all formatted in
 To install, copy the `templates/F3.xml` file to your user config folder.
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
-![Settings](https://dl.dropboxusercontent.com/u/3077539/_linked/F3-Snippets-Settings.jpg)
+![Settings](http://ikkez.de/linked/F3-Snippets-Settings.jpg)
 
 
 ### Usage
@@ -44,7 +44,7 @@ Now you can write the following keywords, hit your `TAB` key and let the magic b
 
 Check out this little demo:
 
-![Demo](https://dl.dropboxusercontent.com/u/3077539/_linked/F3-Snippets-Demo.gif)
+![Demo](http://ikkez.de/linked/f3-snippets-demo.gif)
 
 
 ### PHP Snippets
