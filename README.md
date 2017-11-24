@@ -21,7 +21,7 @@ to install PhpStorm schemes, settings and templates, you need to find its user c
 
 The F3 code style uses a very compact alignment. 
 
-To install, copy `codestyles/F3_Codestyle.xml` to your config folder. Restart PhpStorm and continue at Preferences > Editor > Code Style 
+To install, copy `codestyles/F3_Codestyle.xml` to your config folder. If the `codestyles` directory does not exist, just create it. Restart PhpStorm and continue at Preferences > Editor > Code Style 
 
 * set default right margins (columns) to 90 (no exceptions)
 * select F3 Scheme
@@ -32,7 +32,7 @@ when you now use your Menu > Code > Reformat Code, it should be all formatted in
 
 ## Live-Template
 
-To install, copy the `templates/F3.xml` file to your user config folder.
+To install, copy the `templates/F3.xml` file to your user config folder. If the `templates` directory does not exist, just create it.
 Now restart PhpStorm and check if the F3 LiveTemplate is checked in the settings.
 
 ![Settings](http://ikkez.de/linked/F3-Snippets-Settings.jpg)
