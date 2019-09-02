@@ -6,12 +6,6 @@
 ## How-To install
 to install PhpStorm schemes, settings and templates, you need to find its user config folder first. This should be present at:
 
-(for 9.x versions)
-+ Windows: `<your home directory>\.WebIde<version>\config\`
-+ Linux: `~\.WebIde<version>\config\`
-+ MacOS: `~/Library/Preferences/WebIde<version>/`
-
-(for versions 2016+)
 + Windows: `<your home directory>\.PhpStorm<version>\config\`
 + Linux: `~\.PhpStorm<version>\config\`
 + MacOS: `~/Library/Preferences/PhpStorm<version>/`
@@ -112,7 +106,7 @@ $f3->set('DB', new \DB\SQL('sqlite:data/sqlite.db'));
 
 ### Template Snippets
 
-All template snippets can also be accessed with the `f3` prefix, i.e. like `f3repeat`, which will create the tag `<F3:repeat ... >`. This is helpful, since PhpStorm will colorize this in your html markup, so you'll find it easier to spot the F3 parts in your templates.
+All template snippets are using the namespaced tags with a `F3:` prefix like the tag `<F3:repeat ... >`. This is helpful, since PhpStorm will colorize this in your html markup, so you'll find it easier to spot the F3 parts in your templates.
 
 ---
 
@@ -120,6 +114,22 @@ All template snippets can also be accessed with the `f3` prefix, i.e. like `f3re
 
 ``` html
 {{  }}
+```
+
+#### {-
+
+exclude an expression (useful for JS-variables)
+
+``` html
+{-{{  }}-}
+```
+
+#### {~
+
+exclude a part (do not echo it)
+
+``` html
+{~  ~}
 ```
 
 #### @
@@ -155,9 +165,9 @@ a shortcut to print a variable, if it has been defined.
 A check with true-only section
 
 ``` html
-<check if="{{ @ }}">
+<F3:check if="{{ @ }}">
 
-</check>
+</F3:check>
 ```
 
 #### true
@@ -165,23 +175,22 @@ A check with true-only section
 To extend the check section with true and false parts.
 
 ``` html
-<true>
+<F3:true>
 
-</true>
-<false>
+</F3:true>
+<F3:false>
 
-</false>
+</F3:false>
 ```
 
 #### switch
 
 ``` html
-<switch expr="{{ @ }}">
-    <default> </default>
-    <case value=" "> </case>
-    <case value=" "> </case>
-    
-</switch>
+<F3:switch expr="{{ @ }}">
+    <F3:default> </F3:default>
+    <F3:case value=" "> </F3:case>
+    <F3:case value=" "> </F3:case>
+</F3:switch>
 ```
 
 #### case
@@ -189,30 +198,36 @@ To extend the check section with true and false parts.
 adds an additional case with break option to a switch section
 
 ``` html
-<case value=" " break="true"> </case>
+<F3:case value=" " break="true"> </F3:case>
 ```
 
 #### include
 
 ``` html
-<include if="{{ @ }}" href=" " />
+<F3:include href=" " />
+```
+
+#### includeif
+
+``` html
+<F3:include if="{{ @ }}" href=" " />
 ```
 
 
 #### loop
 
 ``` html
-<loop from="{{ @i=0 }}" to="{{ @i < count(@bar) }}" step="{{ @i++ }}">
+<F3:loop from="{{ @i=0 }}" to="{{ @i < count(@bar) }}" step="{{ @i++ }}">
         	
-</loop>
+</F3:loop>
 ```
 
 #### repeat
 
 ``` html
-<repeat group="{{ @array }}" value="{{ @val }}">
+<F3:repeat group="{{ @array }}" value="{{ @val }}">
     {{ @val }}
-</repeat>
+</F3:repeat>
 ```
 
 #### repeat kv
@@ -220,9 +235,9 @@ adds an additional case with break option to a switch section
 expands to: repeat with key and value
 
 ``` html
-<repeat group="{{ @array }}" key="{{ @key }}" value="{{ @val }}">
+<F3:repeat group="{{ @array }}" key="{{ @key }}" value="{{ @val }}">
   {{@key}} {{@val}}
-</repeat>
+</F3:repeat>
 ```
 
 #### repeat vc
@@ -230,9 +245,9 @@ expands to: repeat with key and value
 expands to: repeat with value and counter
 
 ``` html
-<repeat group="{{ @array }}" value="{{ @val }}" counter="{{ @i }}">
+<F3:repeat group="{{ @array }}" value="{{ @val }}" counter="{{ @i }}">
 {{@i}}: {{@val}}
-</repeat>
+</F3:repeat>
 ```
 
 #### repeat kvc
@@ -240,15 +255,15 @@ expands to: repeat with value and counter
 expands to: repeat with key, value and counter
 
 ``` html
-<repeat group="{{ @array }}" key="{{ @key }}" value="{{ @val }}" counter="{{ @i }}">
+<F3:repeat group="{{ @array }}" key="{{ @key }}" value="{{ @val }}" counter="{{ @i }}">
 {{@i}}: {{@key}} {{@val}}
-</repeat>
+</F3:repeat>
 ```
 
 #### set
 
 ``` html
-<set key="value" />
+<F3:set key="value" />
 {{@key}}
 ```
 
