@@ -7,7 +7,7 @@
 to install PhpStorm schemes, settings and templates, you need to find its user config folder first. This should be present at:
 
 + Windows: `<your home directory>\.PhpStorm<version>\config\`
-+ Linux: `~\.PhpStorm<version>\config\`
++ Linux: `~/.PhpStorm<version>/config/`
 + MacOS: `~/Library/Preferences/PhpStorm<version>/`
 
 
